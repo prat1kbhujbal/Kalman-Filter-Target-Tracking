@@ -11,3 +11,8 @@ Implementation of Kalman filter for ball tracking in 2D space.
 <p align="middle">
   <img src="./results/position_tracking.png" />
 </p>
+
+### Error over time
+<p align="middle">
+  <img src="./results/error.png" />
+</p>
