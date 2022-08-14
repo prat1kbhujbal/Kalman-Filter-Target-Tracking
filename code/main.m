@@ -41,7 +41,7 @@ plot(myPredictions(1, :), myPredictions(2, :), 'k+-');
 hold off;
 
 %% Show the error
-nSkip = 10;
+nSkip = 14;
 myError = myPredictions(:, 1:end-nSkip) - ball(:, 1+nSkip:end);
 myError_dist = sqrt(myError(1,:).^2 + myError(2,:).^2);
 myError_mean = mean(myError_dist);
