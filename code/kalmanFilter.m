@@ -13,7 +13,6 @@ function [ predictx, predicty, state, param ] = kalmanFilter( current_t, x, y, s
          0 0 0 1];
     C = [1 0 0 0;
          0 1 0 0];
-    z = [x,y].';
     snoise_cov = [dt*dt/4  0    dt/2 0 ;
                0    dt*dt/4  0  dt/2;
                dt/2     0    1   0;
@@ -21,6 +20,7 @@ function [ predictx, predicty, state, param ] = kalmanFilter( current_t, x, y, s
     
     mnoise_cov = [0.015, 0;
                0, 0.015];
+    z = [x,y].';
     P = A * param.P * transpose(A) +  snoise_cov;
     R = mnoise_cov;
     K = P * transpose(C) * inv(R + C * P * transpose(C));
