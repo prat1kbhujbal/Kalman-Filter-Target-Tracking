@@ -2,7 +2,7 @@
 clear all;
 close all;
 %% Plot the path of the ball
-load ../data_files/training5.mat
+load ../data_files/training_1.mat
 figure(1);
 clf;
 plot(ball(1, :), ball(2, :), 'bo-');
@@ -55,7 +55,7 @@ ylabel('Error (m)');
 legend(sprintf('Prediction: %.2f mean', myError_mean));
 
 %% Load the solution
-load ../data_files/solution5.mat
+load ../data_files/test_1.mat
 
 % Error
 error = predictions(:, 1:end-nSkip) - ball(:, 1+nSkip:end);
